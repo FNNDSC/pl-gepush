@@ -1,5 +1,5 @@
 #                                                            _
-# gepush ds app
+# Ge push ds app
 #
 # (c) 2016 Fetal-Neonatal Neuroimaging & Developmental Science Center
 #                   Boston Children's Hospital
@@ -40,11 +40,22 @@ class GePush(ChrisApp):
         """
         Define the CLI arguments accepted by this plugin app.
         """
+        self.add_argument('--prefix', dest='prefix', type=str, optional=False,
+                           help='prefix string to be added to the GE cloud objects')
+        self.add_argument('--contentType', dest='contentType', type=str, optional=False,
+                           help='content type for the files')
 
     def run(self, options):
         """
         Define the code to be run by this plugin app.
         """
+        # get GE cloud prefix
+        prefix = options.prefix
+        cont_type = options.contentType
+        cmd = 'python {0} -c {1} -p {2} -t {3} -i {4}'.format('Agent17Upload.py',
+                                                              'gehc-bch-sdk.config', prefix,
+                                                              cont_type, options.inputdir)
+        os.system(cmd)
 
 
 # ENTRYPOINT
