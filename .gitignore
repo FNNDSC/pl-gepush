@@ -6,3 +6,6 @@ docs/build
 htmlcov
 .docker
 .idea/
+gepush/keys
+gepush/gehc-bch-sdk.config
+gepush/rootCA.pem
