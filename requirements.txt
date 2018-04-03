@@ -1,4 +1,4 @@
-chrisapp==1.0.7
+chrisapp
 boto3
 requests
 AWSIoTPythonSDK
