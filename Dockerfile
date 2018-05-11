@@ -11,4 +11,4 @@ WORKDIR $APPROOT
 
 RUN pip install -r requirements.txt
 
-CMD ["gepush.py", "--json"]
+CMD ["gepush.py", "--help"]
