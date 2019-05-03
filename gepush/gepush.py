@@ -28,7 +28,7 @@ class GePush(ChrisApp):
     TYPE            = 'ds'
     DESCRIPTION     = 'An app to push data of interest to GE cloud service'
     DOCUMENTATION   = 'http://wiki'
-    VERSION         = '0.1'
+    VERSION         = '0.1.1'
     LICENSE         = 'Opensource (MIT)'
     MAX_NUMBER_OF_WORKERS = 1  # Override with integer value
     MIN_NUMBER_OF_WORKERS = 1  # Override with integer value
